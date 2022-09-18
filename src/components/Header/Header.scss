@@ -1,0 +1,56 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 1rem;
+    color: white;
+
+    &__logo{
+        max-height: 2rem;
+        max-width: 2rem;
+        filter: invert(1);
+        margin-right: 0.5rem;
+
+        &-text{
+            font-size: 2rem;
+        }
+    }
+
+    &__logo-container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-list{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding-left: 0;
+
+            &-item{
+                margin: 0 1rem;
+            }
+        }
+
+        &-button{
+            background: none;
+            color: white;
+            border: .0625rem solid white;
+            padding: 0.5rem 2rem;
+            border-radius: 3.125rem;
+            max-width: 6.25rem;
+        }
+    }
+}

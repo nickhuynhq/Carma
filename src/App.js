@@ -1,9 +1,22 @@
 import './App.scss';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="cars/:carId" element={<CarPage />} />
+          <Route path="/userProfile" element={<ProfilePage />} />
+          <Route path="/signUp" element={<SignUpPage />} />
+          <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

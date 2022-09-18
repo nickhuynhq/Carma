@@ -1,0 +1,23 @@
+@use "./styles/partials/fonts";
+@use "./styles/partials/colors" as *;
+@use "./styles/partials/mixins" as *;
+
+*, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: dm-sans;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
