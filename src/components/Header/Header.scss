@@ -11,6 +11,16 @@
     padding: 1rem;
     color: white;
 
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 4rem;
+    }
+
+    @include desktop{
+        padding: 2rem 8rem;
+    }
+
     &__logo{
         max-height: 2rem;
         max-width: 2rem;
@@ -33,11 +43,20 @@
         align-items: center;
         justify-content: center;
 
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         &-list{
             display: flex;
             justify-content: space-around;
             list-style: none;
             padding-left: 0;
+
+            @include tablet{
+                margin-right: 1rem;
+            }
 
             &-item{
                 margin: 0 1rem;
