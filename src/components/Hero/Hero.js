@@ -1,9 +1,10 @@
 import React from 'react'
+import "./Hero.scss"
 
 const Hero = () => {
   return (
-    <div>Hero
-        
+    <div className="hero">Hero
+        <div>hero</div>
     </div>
   )
 }

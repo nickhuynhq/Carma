@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: none;
     padding: 1rem;
     color: white;
 
@@ -62,7 +62,7 @@
             &-item{
                 margin: 0 1rem;
                 cursor: pointer;
-                border-bottom: 3px solid rgba($color: #000000, $alpha: 1.0);
+                border-bottom: 3px solid rgba(0, 0, 0, 0);
 
                 &:hover{
                     border-bottom: 1px solid white;
@@ -81,7 +81,8 @@
 
             &:hover{
                 background-color: white;
-                color: #000;
+                color: black;
+                mix-blend-mode: lighten;
             }
         }
     }
