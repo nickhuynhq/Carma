@@ -1,0 +1,60 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.search-bar{
+    width: 100%;
+    color: white;
+    background-color: #242565;
+    padding: 2rem;
+  
+    @include tablet{
+        flex-direction: row;
+        width: 80%;
+        margin-top: -2rem;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    &__select-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 4rem;
+    }
+
+    &__label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__select{
+        // A reset of styles, including removing the default dropdown arrow
+        appearance: none;
+        // Additional resets for further consistency
+        color: white;
+        background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: pointer;
+        line-height: inherit;
+        border-bottom: 1px solid white;
+        margin-bottom: 1rem;
+    }
+}

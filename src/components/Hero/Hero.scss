@@ -26,13 +26,15 @@
 
         @include tablet{
             min-width: 400px;
+            max-width: 500px;
             margin-right: 1rem;
             padding-left: 0;
             padding-right: 1rem;
         }
 
         @include desktop{
-            max-width: 600px;
+            max-width: 650px;
+            margin-right: 3rem;
         }
     }
 
@@ -48,11 +50,6 @@
         @include tablet{
             max-width: 30%;
         }
-
-        @include desktop{
-            
-        }
-
         &-description{
             margin: 1rem 0;
         }
