@@ -41,6 +41,7 @@
     &__text-box{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         padding: 1rem;
         color: white;
@@ -49,6 +50,10 @@
 
         @include tablet{
             max-width: 30%;
+        }
+        @include desktop{
+            padding: 2rem;
+            min-height: 18rem;
         }
         &-description{
             margin: 1rem 0;

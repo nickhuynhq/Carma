@@ -6,7 +6,7 @@ const SearchBar = () => {
     <div className="search-bar">
         <form className="search-bar__form">
             <div className="search-bar__select-container">
-                <label className="search-bar__label" for="cars">Search Brand</label>
+                <label className="search-bar__label" forhtml="cars">Search Brand</label>
                 <select className="search-bar__select" name="cars" id="cars">
                     <option value="volvo">Volvo</option>
                     <option value="saab">Saab</option>
@@ -15,7 +15,7 @@ const SearchBar = () => {
                 </select>
             </div>
             <div className="search-bar__select-container">
-                <label className="search-bar__label" for="cars">Model</label>
+                <label className="search-bar__label" forhtml="cars">Model</label>
                 <select className="search-bar__select" name="cars" id="cars">
                     <option value="volvo">Volvo</option>
                     <option value="saab">Saab</option>
@@ -24,7 +24,7 @@ const SearchBar = () => {
                 </select>
             </div>
             <div className="search-bar__select-container">
-                <label className="search-bar__label" for="cars">Year</label>
+                <label className="search-bar__label" forhtml="cars">Year</label>
                 <select className="search-bar__select" name="cars" id="cars">
                     <option value="volvo">Volvo</option>
                     <option value="saab">Saab</option>
@@ -32,6 +32,7 @@ const SearchBar = () => {
                     <option value="audi">Audi</option>
                 </select>
             </div>
+            <button className='search-bar__button'>Search</button>
         </form>
     </div>
   )
