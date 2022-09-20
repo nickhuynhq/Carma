@@ -17,3 +17,21 @@
     background-size: cover;
     width: 100%;
 }
+
+.vehicle-type{
+    margin-top: 3rem;
+
+    @include tablet{
+        width: 80%;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
