@@ -16,8 +16,12 @@
         width: 30%;
     }
 
-    &:hover{
-        opacity: 0.65;
+    &:hover .vehicle-card__image{
+        opacity: 0.60;
+    }
+
+    &:hover .vehicle-card__info{
+        background-color: $magenta;
     }
 
     &__image{
@@ -25,9 +29,8 @@
         height: 180px;
         object-fit: cover;
         border-radius: 15px 15px 0 0;
-
+        transition: 0.5s;
         
-
         @include desktop{
             height: 250px;
         }
@@ -36,10 +39,11 @@
     &__info{
         display: flex;
         justify-content: center;
-        background-color: #242565;
-        color: white;
+        background-color: $purple;
+        color: $white;
         width: 100%;
         padding: 1rem;
         border-radius: 0 0 15px 15px;
+        transition: 0.5s;
     }
 }

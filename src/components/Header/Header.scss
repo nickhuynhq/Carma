@@ -9,7 +9,7 @@
     align-items: center;
     background-color: none;
     padding: 1rem;
-    color: white;
+    color: $white;
 
     @include tablet{
         flex-direction: row;
@@ -22,6 +22,7 @@
         max-width: 2rem;
         filter: invert(1);
         margin-right: 0.5rem;
+        transition: 0.5s;
 
         &-text{
             font-size: 2rem;
@@ -32,6 +33,14 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        transition: 0.5s;
+
+        &:hover{
+            color: $purple;
+        }
+        &:hover .header__logo{
+            filter: invert(16%) sepia(19%) saturate(3983%) hue-rotate(214deg) brightness(94%) contrast(100%);
+        }
     }
 
     &__navigation{
@@ -59,24 +68,26 @@
                 margin: 0 1rem;
                 cursor: pointer;
                 border-bottom: 3px solid rgba(0, 0, 0, 0);
+                transition: 0.3s;
 
                 &:hover{
-                    border-bottom: 1px solid white;
+                    border-bottom: 1px solid $white;
                 }
             }
         }
 
         &-button{
             background: none;
-            color: white;
-            border: .0625rem solid white;
+            color: $white;
+            border: .0625rem solid $white;
             padding: 0.5rem 2rem;
             border-radius: 3.125rem;
             max-width: 6.25rem;
             cursor: pointer;
+            transition: 0.3s;
 
             &:hover{
-                background-color: white;
+                background-color: $white;
                 color: black;
                 mix-blend-mode: lighten;
             }

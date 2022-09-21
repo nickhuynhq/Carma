@@ -44,7 +44,7 @@
         justify-content: center;
         align-items: center;
         padding: 1rem;
-        color: white;
+        color:$white;
         background-color: rgba(217, 217, 217, 0.5);
         border-radius: .625rem;
 
@@ -60,17 +60,18 @@
         }
 
         &-button{
-            color: white;
-            background-color: #F5167E;
+            color:$white;
+            background-color: $magenta;
             border: none;
             padding: 1rem 2rem;
             max-width: 11.25rem;
             border-radius: 3.125rem;
             cursor: pointer;
+            transition: 0.3s;
 
             &:hover{
                 @extend .hero__text-box-button;
-                background-color: #a31055;
+                background-color: $dark-magenta;
             }
         }
     }

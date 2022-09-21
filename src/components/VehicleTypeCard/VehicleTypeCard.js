@@ -15,7 +15,6 @@ const VehicleTypeCard = ({vehicleImage, vehicleType}) => {
       fetchCarByType(searchObj)
       .then((response) => {
           navigate(`/carsList/${vehicleType}`)
-          console.log(response.data);
       })
   }
 
