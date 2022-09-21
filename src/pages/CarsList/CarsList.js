@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { fetchCarByType } from '../../utils/api';
+import Header from "../../components/Header/Header"
+import Hero from "../../components/Hero/Hero"
 import "./CarsList.scss"
 
 const CarsList = () => {
@@ -11,7 +13,6 @@ const CarsList = () => {
     let searchObj = {
       type: type
     }
-
     fetchCarByType(searchObj)
       .then((response) => {
         setCarDetails(response.data);
@@ -23,10 +24,14 @@ const CarsList = () => {
   }
 
   return (
-    <>
+    <div className='cars-list'>
+      <div className='cars-list__header'>
+        <Header />
+      </div>
+      
       <div>Now showing {type}</div>
       <div>{JSON.stringify(carDetails)}</div>
-    </>
+    </div>
 
   )
 }

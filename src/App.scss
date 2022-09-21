@@ -10,6 +10,11 @@ h1, h2, h3, p {
     padding: 0;
     margin: 0;
 }
+
+a {
+    color: $white;
+    text-decoration: none; /* no underline */
+  }
   
 html {
     scroll-behavior: smooth;

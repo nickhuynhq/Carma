@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Car from './pages/Car/Car';
 import CarsList from './pages/CarsList/CarsList'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signUp" element={<SignUpPage />} />
           <Route path="*" element={<NotFoundPage />} /> */}
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

@@ -1,3 +1,62 @@
 @use "../../styles/partials/fonts";
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
+
+.footer{
+    display: flex;
+    color: $white;
+    background-color: $purple;
+    padding: 2rem 10%;
+    margin-top: 10vh;
+
+    &__column{
+        width:25%;
+
+        &-left{
+            width: 50%;
+        }
+
+        &-list{
+            list-style: none;
+            padding-left: 0;
+
+            &-item{
+                transition: 0.3s;
+
+                &:hover{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    &__logo-container{
+        display: flex;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    &__logo{
+        max-height: 2rem;
+        max-width: 2rem;
+        filter: invert(1);
+        margin-right: 0.5rem;
+        transition: 0.5s;
+
+        &-text{
+            font-size: 2rem;
+        }
+    }
+
+    &__social-containter{
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    &__social-icon{
+        max-width: 48px;
+        filter: invert(1);
+        cursor: pointer;
+        margin-left: -6px;
+        margin-right: 1.2rem;
+    }
+}
