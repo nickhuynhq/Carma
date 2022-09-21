@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { fetchCarById } from '../../utils/api';
+import { fetchCarByType } from '../../utils/api';
+import "./CarsList.scss"
 
-const Car = () => {
-  const { carId } = useParams();
+const CarsList = () => {
+  const { type } = useParams();
   const [carDetails, setCarDetails] = useState(null);
 
   useEffect(() => {
-    fetchCarById(carId)
+    let searchObj = {
+      type: type
+    }
+
+    fetchCarByType(searchObj)
       .then((response) => {
-        setCarDetails(response.data[0]);
+        setCarDetails(response.data);
       })
-  }, [carId])
+  }, [type])
 
   if (!carDetails) {
     return <p>Loading</p>;
@@ -19,11 +24,11 @@ const Car = () => {
 
   return (
     <>
-      <div>Now showing {carId}</div>
+      <div>Now showing {type}</div>
       <div>{JSON.stringify(carDetails)}</div>
     </>
 
   )
 }
 
-export default Car
+export default CarsList

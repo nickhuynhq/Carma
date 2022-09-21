@@ -1,7 +1,7 @@
 import React from 'react'
-import { fetchCars, fetchCarBySearch } from '../../utils/api';
+import { fetchCarBySearch } from '../../utils/api';
 import "./SearchBar.scss"
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
 

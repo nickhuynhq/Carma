@@ -10,8 +10,11 @@ export const fetchCarById = (carId) => {
 }
 
 export const fetchCarBySearch = (body) => {
-    console.log(body)
     return axios.get(`${BASE_URL}/cars/search?brand=${body.brand}&make=${body.make}&year=${body.year}`)
+}
+
+export const fetchCarByType = (body) => {
+    return axios.get(`${BASE_URL}/cars/searchType?type=${body.type}`)
 }
 
 // export const addInventoryItem = (item) => {

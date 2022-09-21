@@ -6,6 +6,9 @@ import VehicleTypeCard from '../../components/VehicleTypeCard/VehicleTypeCard'
 import Sedan from "../../assets/images/sedan.jpg"
 import SUV from "../../assets/images/suv.jpg"
 import Truck from "../../assets/images/truck.jpg"
+import Hatch from "../../assets/images/hatch.jpg"
+import Coupe from "../../assets/images/coupe.jpg"
+import Minivan from "../../assets/images/minivan.jpg"
 import "./Home.scss"
 
 const Home = () => {
@@ -20,19 +23,33 @@ const Home = () => {
       <SearchBar />
       
       <section className="vehicle-type">
-        <h2>Vehicle Types</h2>
+        <h2 className="vehicle-type__heading">Vehicle Types</h2>
         <div className='vehicle-type__list'>
           <VehicleTypeCard 
             vehicleImage={Sedan}
-            vehicleType={"Sedans"}
+            vehicleType={"Sedan"}
           />
           <VehicleTypeCard 
             vehicleImage={SUV}
-            vehicleType={"SUVs"}
+            vehicleType={"SUV"}
           />
           <VehicleTypeCard 
             vehicleImage={Truck}
-            vehicleType={"Trucks"}
+            vehicleType={"Truck"}
+          />
+
+          <VehicleTypeCard 
+            vehicleImage={Hatch}
+            vehicleType={"Hatch"}
+          />
+          <VehicleTypeCard 
+            vehicleImage={Coupe}
+            vehicleType={"Coupe"}
+          />
+
+          <VehicleTypeCard 
+            vehicleImage={Minivan}
+            vehicleType={"Minivan"}
           />
         </div>
       </section>

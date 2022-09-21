@@ -1,12 +1,29 @@
 import React from 'react'
 import "./VehicleTypeCard.scss"
+import { fetchCarByType } from '../../utils/api';
+import { useNavigate } from 'react-router-dom';
 
 const VehicleTypeCard = ({vehicleImage, vehicleType}) => {
+
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+      let searchObj = {
+          type: vehicleType
+      }
+
+      fetchCarByType(searchObj)
+      .then((response) => {
+          navigate(`/carsList/${vehicleType}`)
+          console.log(response.data);
+      })
+  }
+
   return (
-    <div className='vehicle-card'>
+    <div className='vehicle-card' onClick={()=>{handleCardClick()}}>
       <img className='vehicle-card__image' src={vehicleImage} alt={vehicleType}/>
       <div className='vehicle-card__info'>
-        <h3>{vehicleType}</h3>
+        <h2>{`${vehicleType}`}</h2>
       </div>
     </div>
 

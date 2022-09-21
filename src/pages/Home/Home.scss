@@ -25,13 +25,19 @@
         width: 80%;
     }
 
+    &__heading{
+        font-size: 2rem;
+    }
+
     &__list{
         display: flex;
         flex-direction: column;
+        padding: 1rem 0;
 
         @include tablet{
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
     }
 }
