@@ -1,9 +1,32 @@
-.cars-list__header{
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-image: linear-gradient(125deg, rgba(237,70,90,1) 0%, rgba(85,34,204,0.6643032212885154) 100%),
-        url(../../assets/images/winding-road.jpg);
-    background-repeat:no-repeat;
-    background-size: cover;
-    width: 100%;
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.cars-list-section{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 10%;
+
 }
+
+.cars-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &__header{
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-image: linear-gradient(125deg, rgba(237,70,90,1) 0%, rgba(85,34,204,0.6643032212885154) 100%),
+            url(../../assets/images/winding-road.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+}
+

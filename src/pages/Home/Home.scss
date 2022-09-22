@@ -20,9 +20,11 @@
 
 .vehicle-type{
     margin-top: 3rem;
+    padding: 1rem 2rem;
 
     @include tablet{
         width: 80%;
+        padding: 0;
     }
 
     &__heading{
@@ -32,8 +34,7 @@
     &__list{
         display: flex;
         flex-direction: column;
-        padding: 1rem 0;
-
+        
         @include tablet{
             flex-direction: row;
             justify-content: space-between;

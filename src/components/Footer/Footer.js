@@ -20,13 +20,13 @@ const Footer = () => {
                 <h1 className='footer__logo-text'>Carma</h1>
             </div>
             <div className='footer__social-containter'>
-                <a href="https://facebook.com" target='_blank' rel="noopener">
+                <a href="https://facebook.com" target='_blank' rel="noreferrer">
                     <img className='footer__social-icon' src={Facebook} alt="Facebook"/>
                 </a>
-                <a href="https://twitter.com" target='_blank' rel="noopener">
+                <a href="https://twitter.com" target='_blank' rel="noreferrer">
                     <img className='footer__social-icon' src={Twitter} alt="Twitter"/>
                 </a>
-                <a href="https://twitter.com" target='_blank' rel="noopener">
+                <a href="https://twitter.com" target='_blank' rel="noreferrer">
                     <img className='footer__social-icon' src={LinkedIn} alt="LinkedIn"/>
                 </a>
             </div>
@@ -35,12 +35,12 @@ const Footer = () => {
         <div className='footer__column'>
             <h2 className='footer__column-label'>Vehicles</h2>
             <ul className='footer__column-list'>
-                <li className='footer__column-list-item'><a href='/carsList/sedan'>Sedans</a></li>
-                <li className='footer__column-list-item'><a href='/carsList/suv'>SUVs</a></li>
-                <li className='footer__column-list-item'><a href='/carsList/truck'>Trucks</a></li>
-                <li className='footer__column-list-item'><a href='/carsList/hatch'>Hatches</a></li>
-                <li className='footer__column-list-item'><a href='/carsList/coupe'>Coupes</a></li>
-                <li className='footer__column-list-item'><a href='/carsList/minivan'>Minivans</a></li>
+                <li className='footer__column-list-item'><a href='/carsList/Sedan'>Sedans</a></li>
+                <li className='footer__column-list-item'><a href='/carsList/SUV'>SUVs</a></li>
+                <li className='footer__column-list-item'><a href='/carsList/Truck'>Trucks</a></li>
+                <li className='footer__column-list-item'><a href='/carsList/Hatch'>Hatches</a></li>
+                <li className='footer__column-list-item'><a href='/carsList/Coupe'>Coupes</a></li>
+                <li className='footer__column-list-item'><a href='/carsList/Minivan'>Minivans</a></li>
             </ul>
         </div>
         <div className='footer__column'>

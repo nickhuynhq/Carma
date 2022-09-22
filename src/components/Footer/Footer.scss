@@ -4,10 +4,15 @@
 
 .footer{
     display: flex;
+    flex-direction: column;
     color: $white;
     background-color: $purple;
     padding: 2rem 10%;
     margin-top: 10vh;
+
+    @include tablet{
+        flex-direction: row;
+    }
 
     &__column{
         width:25%;
@@ -50,6 +55,7 @@
     &__social-containter{
         display: flex;
         margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 
     &__social-icon{

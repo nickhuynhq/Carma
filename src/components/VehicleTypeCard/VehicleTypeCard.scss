@@ -2,7 +2,7 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 
-.vehicle-card{
+.vehicle-type-card{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,11 +16,11 @@
         width: 30%;
     }
 
-    &:hover .vehicle-card__image{
+    &:hover .vehicle-type-card__image{
         opacity: 0.60;
     }
 
-    &:hover .vehicle-card__info{
+    &:hover .vehicle-type-card__info{
         background-color: $magenta;
     }
 
@@ -38,7 +38,6 @@
 
     &__info{
         display: flex;
-        justify-content: center;
         background-color: $purple;
         color: $white;
         width: 100%;

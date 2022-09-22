@@ -1,0 +1,85 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.vehicle-card{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+
+    @include tablet{
+        max-width: 250px;
+    }
+
+    @include desktop{
+        max-width: 340px;
+    }
+
+
+    &:hover .vehicle-card__image{
+        opacity: 0.60;
+    }
+
+    &:hover .vehicle-card__info{
+        background-color: $magenta;
+    }
+
+    &__image{
+        width: 100%;
+        min-height: 200px;
+        padding: 1.5rem;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        transition: 0.5s;
+
+        @include tablet{
+            object-fit: fit;
+            max-height: 220px;
+          
+
+        }
+        
+        @include desktop{
+            min-height: 250px;
+            max-height: 250px;
+        }
+    }
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        background-color: $purple;
+        color: $white;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0 0 15px 15px;
+        transition: 0.5s;
+
+        &-date{
+            font-size: 2rem;
+        }
+        &-car{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        &-rating-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $magenta;
+            margin: 1rem 0;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+        &-rating{
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+}

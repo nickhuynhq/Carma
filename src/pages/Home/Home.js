@@ -12,7 +12,6 @@ import Minivan from "../../assets/images/minivan.jpg"
 import "./Home.scss"
 
 const Home = () => {
-
   
   return (
     <div className='home'>

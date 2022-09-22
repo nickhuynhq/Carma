@@ -19,9 +19,9 @@ const VehicleTypeCard = ({vehicleImage, vehicleType}) => {
   }
 
   return (
-    <div className='vehicle-card' onClick={()=>{handleCardClick()}}>
-      <img className='vehicle-card__image' src={vehicleImage} alt={vehicleType}/>
-      <div className='vehicle-card__info'>
+    <div className='vehicle-type-card' onClick={()=>{handleCardClick()}}>
+      <img className='vehicle-type-card__image' src={vehicleImage} alt={vehicleType}/>
+      <div className='vehicle-type-card__info'>
         <h2>{`${vehicleType}`}</h2>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Header.scss"
 import Logo from "../../assets/logo/carma-logo.png"
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const navigate = useNavigate();

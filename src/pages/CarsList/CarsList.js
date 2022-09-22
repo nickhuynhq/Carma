@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { fetchCarByType } from '../../utils/api';
 import Header from "../../components/Header/Header"
-import Hero from "../../components/Hero/Hero"
+import VehicleCard from '../../components/VehicleCard/VehicleCard';
 import "./CarsList.scss"
 
 const CarsList = () => {
   const { type } = useParams();
-  const [carDetails, setCarDetails] = useState(null);
+  const [carList, setCarList] = useState([]);
 
   useEffect(() => {
     let searchObj = {
@@ -15,23 +15,37 @@ const CarsList = () => {
     }
     fetchCarByType(searchObj)
       .then((response) => {
-        setCarDetails(response.data);
+        setCarList(response.data);
       })
   }, [type])
 
-  if (!carDetails) {
+  if (!carList) {
     return <p>Loading</p>;
   }
 
   return (
-    <div className='cars-list'>
+    <>
       <div className='cars-list__header'>
         <Header />
       </div>
-      
-      <div>Now showing {type}</div>
-      <div>{JSON.stringify(carDetails)}</div>
-    </div>
+      <div className='cars-list-section'>
+        <h1>Vehicle Type: {type}</h1>
+        <div className='cars-list'>
+          {carList.map((car) => {
+              return <VehicleCard 
+                key = {car.id}
+                id = {car.id}
+                brand = {car.brand}
+                make = {car.make}
+                year = {car.year}
+                rating = {car.rating}
+                image = {car.image}
+              />
+          })}
+          
+        </div>
+      </div>
+    </>
 
   )
 }
