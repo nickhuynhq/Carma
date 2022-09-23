@@ -20,7 +20,7 @@ const Footer = () => {
                 <h1 className='footer__logo-text'>Carma</h1>
             </div>
             <div className='footer__social-containter'>
-                <a href="https://facebook.com" target='_blank' rel="noreferrer">
+                <a href="facebook.com" target='_blank' rel="noreferrer">
                     <img className='footer__social-icon' src={Facebook} alt="Facebook"/>
                 </a>
                 <a href="https://twitter.com" target='_blank' rel="noreferrer">

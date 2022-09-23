@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { fetchCarById } from '../../utils/api';
 import Header from "../../components/Header/Header"
 import "./Car.scss"
+import Treemap from '../../components/TreeMap/TreeMap';
+import data from "../../components/TreeMap/data"
 
 const Car = () => {
   const { carId } = useParams();
@@ -36,6 +38,8 @@ const Car = () => {
             <h3 className='cars__hero-price'>${carDetails.price}</h3>
           </div>
         </div>
+
+        <Treemap data={data} height={400} width={1000} />
       </section>
       
     </>
