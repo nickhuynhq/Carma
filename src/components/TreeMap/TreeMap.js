@@ -8,6 +8,7 @@ export default function Treemap({ data, width, height }) {
   function renderTreemap() {
     const svg = d3.select(svgRef.current);
 
+    // Make svg responsive to viewbox
     svg.attr("viewBox", `0 0 1000 400`);
 
     const root = d3

@@ -10,9 +10,12 @@ import Hatch from "../../assets/images/hatch.jpg"
 import Coupe from "../../assets/images/coupe.jpg"
 import Minivan from "../../assets/images/minivan.jpg"
 import "./Home.scss"
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton'
 
 const Home = () => {
+
   
+
   return (
     <div className='home'>
       <div className="header-hero">
@@ -52,6 +55,7 @@ const Home = () => {
           />
         </div>
       </section>
+     <ScrollToTopButton />
     </div>
   )
 }

@@ -141,6 +141,7 @@
                 display: none;
                 @include tablet{
                     display: flex;
+                    margin-bottom: 1rem;
                 }
             }
 

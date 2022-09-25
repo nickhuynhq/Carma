@@ -9,10 +9,12 @@ import "./Footer.scss"
 const Footer = () => {
     const navigate = useNavigate();
     const handleLogoClick = () => {
+        window.scroll(0,0)
         navigate(`/`)
     }
 
   return (
+    
     <section className='footer'>
         <div className='footer__column-left'>
             <div className="footer__logo-container" onClick={()=>{handleLogoClick()}}>

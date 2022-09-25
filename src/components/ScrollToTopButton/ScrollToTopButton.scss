@@ -1,0 +1,22 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.scroll-to-top-button{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    color: $white;
+    background-color: $magenta;
+    border: none;
+    padding: 1rem 2rem;
+    max-width: 11.25rem;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+        @extend .scroll-to-top-button;
+        background-color: $dark-magenta;
+    }
+}
