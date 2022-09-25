@@ -24,17 +24,44 @@
     }
 
     &__section{
+        display: flex;
+        flex-direction: column;
         margin: 0 10vw;
         margin-top: -55vh;
-       
         width: 80vw;
         padding: 1rem;
         border-radius: 15px;
         background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         @include tablet{
             margin-top: -65vh;
-            padding: 2rem;
+            padding: 3rem;
+        }
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet{
+            align-items: flex-start;
+        }
+        &-year{
+            font-size: 1.5rem;
+
+            @include tablet{
+                font-size: 2rem;
+            }
+        }
+
+        &-model{
+            font-size: 2rem;
+
+            @include tablet{
+                font-size: 3rem;
+            }
         }
     }
 
@@ -44,19 +71,145 @@
 
         @include tablet{
             flex-direction: row;
+            justify-content: space-around;
         }
 
         &-image{
             width: 100%;
             @include tablet{
+                height: 60%;
                 width: 60%;
             }
         }
 
-        &-score-container{
-            width: 40%;
-            background-color: aqua;
+        &-score-card{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px;
+            width: 100%;
+            padding: 1rem;
+            background-color: $grey;
             border-radius: 15px;
+            margin-bottom: 1rem;
+
+            @include tablet{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 320px;
+                width: 320px;
+            }
+        }
+
+        &-score-container{
+            display: flex;
+            flex-direction: column;
+
+            @include tablet{
+                align-items: center;
+            }
+        }
+
+        &-label{
+            margin-top: 0.75rem;
+            font-size: 14px;
+
+            @include tablet{
+                font-size: 1rem;
+            }
+        }
+
+        &-score{
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: $white;
+            background-color: green;
+            width: 3rem;
+            height: 3rem;
+            padding: 2rem 2rem;
+            border-radius: 10px;
+
+            @include tablet{
+                font-size: 3rem;
+                padding: 3rem 3rem;
+            }
+
+            &-label{
+                display: none;
+                @include tablet{
+                    display: flex;
+                }
+            }
+
+            &--A{
+                @extend .cars__hero-score;
+                background-color: rgb(0, 162, 0);
+            }
+            &--B{
+                @extend .cars__hero-score;
+                background-color: rgb(193, 200, 0);
+            }
+            &--C{
+                @extend .cars__hero-score;
+                background-color: rgb(218, 134, 0);
+            }
+            &--D{
+                @extend .cars__hero-score;
+                background-color: rgb(212, 57, 0);
+            }
+            &--F{
+                @extend .cars__hero-score;
+                background-color: red;
+            }
+        }
+
+        &-price{
+            font-size: 1.2rem;
+
+            @include tablet{
+                font-size: 1.5rem;
+            }
+
+            &-container{
+                display: flex;
+                flex-direction: column;
+
+                @include tablet{
+                    align-items: center;
+                }
+            }
         }
     }
+
+    &__description-section{
+        margin: 2rem 0;
+    }
+
+    &__description{
+        margin: 1.5rem 0;
+
+        @include tablet{
+            margin: 2rem 0;
+        }
+
+        &-heading{
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+
+            @include tablet{
+                font-size: 2rem;
+            }
+        }
+
+        &-paragraph{
+            margin: 0.5rem 0;
+            line-height: 1.5;
+            
+        }
+    }
+
+    
 }

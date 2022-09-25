@@ -14,7 +14,7 @@ const data = {
         value: 9320
       },
       {
-        name: 'Maintenance',
+        name: 'Repairs',
         value: 353
       },
     ],

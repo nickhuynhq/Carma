@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
 import * as d3 from "d3";
+import "./TreeMap.scss"
 
 export default function Treemap({ data, width, height }) {
   const svgRef = useRef(null);
@@ -7,7 +8,7 @@ export default function Treemap({ data, width, height }) {
   function renderTreemap() {
     const svg = d3.select(svgRef.current);
 
-    svg.attr("viewBox", `0 0 1200 2800`);
+    svg.attr("viewBox", `0 0 1000 400`);
 
     const root = d3
       .hierarchy(data)
@@ -23,6 +24,7 @@ export default function Treemap({ data, width, height }) {
       .attr("transform", (d) => `translate(${d.x0},${d.y0})`)
       .on("click", function (d, i) {
         console.log(i.data.name);
+        window.location.hash = i.data.name;
       })
       .on('mouseover', function(d){
         d3.select(this).style("opacity", 0.5); 
@@ -46,7 +48,7 @@ export default function Treemap({ data, width, height }) {
         d3.select(this).style("cursor", "default"); 
       });
 
-    const fontSize = 16;
+    const fontSize = 14;
 
     // add text to rects
     nodes
@@ -101,7 +103,7 @@ export default function Treemap({ data, width, height }) {
   }, [data]);
 
   return (
-    <div>
+    <div className="treemap">
       <svg ref={svgRef} />
     </div>
   );
