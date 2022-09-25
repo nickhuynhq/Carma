@@ -4,6 +4,7 @@ import { fetchCarById } from "../../utils/api";
 import Header from "../../components/Header/Header";
 import "./Car.scss";
 import Treemap from "../../components/TreeMap/TreeMap";
+import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
 
 const Car = () => {
   const { carId } = useParams();
@@ -112,6 +113,7 @@ const Car = () => {
 
         <section className="cars__description-section">
           <div className="cars__description" id="Depreciation">
+            
             <h1 className="cars__description-heading">Depreciation</h1>
             <p className="cars__description-paragraph">
               A {carDetails.brand} {carDetails.make} will depreciate in value by{" "}
@@ -182,6 +184,7 @@ const Car = () => {
             </p>
           </div>
         </section>
+        <ScrollToTopButton />
       </section>
     </>
   );

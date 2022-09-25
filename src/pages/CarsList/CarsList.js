@@ -4,6 +4,7 @@ import { fetchCarByType } from '../../utils/api';
 import Header from "../../components/Header/Header"
 import VehicleCard from '../../components/VehicleCard/VehicleCard';
 import "./CarsList.scss"
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton';
 
 const CarsList = () => {
   const { type } = useParams();
@@ -44,6 +45,7 @@ const CarsList = () => {
           })}
           
         </div>
+        <ScrollToTopButton />
       </div>
     </>
 
