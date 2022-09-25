@@ -1,3 +1,31 @@
 @use "../../styles/partials/fonts";
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
+
+.user__header{
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: linear-gradient(125deg, rgba(237,70,90,1) 0%, rgba(85,34,204,0.6643032212885154) 100%),
+        url(../../assets/images/winding-road.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+}
+
+.user__main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10vw;
+    margin-top: -55vh;
+    width: 80vw;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @include tablet{
+        margin-top: -65vh;
+        padding: 3rem;
+    }
+}

@@ -17,22 +17,7 @@ export const fetchCarByType = (body) => {
     return axios.get(`${BASE_URL}/cars/searchType?type=${body.type}`)
 }
 
-// export const addInventoryItem = (item) => {
-//     return axios.post(`${BASE_URL}/inventory/add`, item);
-// }
+export const signUpUser = (body) => {
+    return axios.post(`${BASE_URL}/users/register`, body)
+}
 
-// export const editInventoryItem = (item) => {
-//     return axios.put(`${BASE_URL}/inventory/${item.id}/edit`, item);
-// }
-
-// export const fetchWarehouses = () => {
-//     return axios.get(`${BASE_URL}/warehouse/`);
-// }
-
-// export const addNewWarehouse = (body) => {
-//     return axios.post(`${BASE_URL}/warehouse/add`, body);
-// }
-
-// export const editWarehouse = (body, warehouseId) => {
-//     return axios.put(`${BASE_URL}/warehouse/${warehouseId}/edit`, body);
-// }

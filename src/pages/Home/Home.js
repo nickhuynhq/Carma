@@ -14,8 +14,6 @@ import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopBut
 
 const Home = () => {
 
-  
-
   return (
     <div className='home'>
       <div className="header-hero">
@@ -39,7 +37,6 @@ const Home = () => {
             vehicleImage={Truck}
             vehicleType={"Truck"}
           />
-
           <VehicleTypeCard 
             vehicleImage={Hatch}
             vehicleType={"Hatch"}
@@ -48,7 +45,6 @@ const Home = () => {
             vehicleImage={Coupe}
             vehicleType={"Coupe"}
           />
-
           <VehicleTypeCard 
             vehicleImage={Minivan}
             vehicleType={"Minivan"}

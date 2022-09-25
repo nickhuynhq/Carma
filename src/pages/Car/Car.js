@@ -10,13 +10,6 @@ const Car = () => {
   const { carId } = useParams();
   const [carDetails, setCarDetails] = useState(null);
 
-  useEffect(() => {
-    fetchCarById(carId).then((response) => {
-      setCarDetails(response.data[0]);
-      console.log(response.data[0]);
-    });
-  }, [carId]);
-
   const fuel_economy = carDetails
     ? Math.floor(((19000 / 100) * carDetails.fuel_economy * 1.5) / 2)
     : 0;
@@ -68,6 +61,13 @@ const Car = () => {
     }
   };
 
+  useEffect(() => {
+    fetchCarById(carId).then((response) => {
+      setCarDetails(response.data[0]);
+      console.log(response.data[0]);
+    });
+  }, [carId]);
+
   if (!carDetails) {
     return <p>Loading</p>;
   }
@@ -77,7 +77,7 @@ const Car = () => {
       <div className="cars__header">
         <Header />
       </div>
-      <section className="cars__section">
+      <main className="cars__section">
         <div className="cars__title">
           <h1 className="cars__title-year">{carDetails.year}</h1>
           <h2 className="cars__title-model">
@@ -185,7 +185,7 @@ const Car = () => {
           </div>
         </section>
         <ScrollToTopButton />
-      </section>
+      </main>
     </>
   );
 };

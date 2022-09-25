@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Header.scss"
 import Logo from "../../assets/logo/carma-logo.png"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,11 +21,9 @@ const Header = () => {
             <li className="header__navigation-list-item">About</li>
             <li className="header__navigation-list-item">Contact</li>
           </ul>
-          <button className="header__navigation-button">Login</button>
+          <Link to="/user/login"><button className="header__navigation-button">Login</button></Link>
         </nav>
       </div>
-    
-    
   )
 }
 
