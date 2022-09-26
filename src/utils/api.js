@@ -25,3 +25,11 @@ export const logInUser = (body) => {
     return axios.post(`${BASE_URL}/users/login`, body)
 }
 
+export const fetchUserVehicleList = () => {
+    return axios.get(`${BASE_URL}/saved-vehicles/`,{
+        headers: {
+            Authorization: `Bearer ${localStorage.token}`
+        }
+    })
+}
+

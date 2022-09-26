@@ -31,6 +31,7 @@ const Login = () => {
                 password: event.target.password.value,
             }            
         )
+        localStorage.setItem('token', response.data.token);
         setUser('');
         setPwd('');
         setSuccess(true) 

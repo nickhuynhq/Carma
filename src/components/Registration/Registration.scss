@@ -41,6 +41,7 @@
         margin-top: 0.5rem;
         background-color: $white;
         font-size: .875rem;
+        cursor: pointer;
 
         &--invalid{
             @extend .form__input;
@@ -62,12 +63,14 @@
         &:hover{
             @extend .form__button;
             background-color: $dark-magenta;
+            cursor: pointer;
         }
 
         &--alt{
             margin-left: 1rem;
             color: $purple;
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 
