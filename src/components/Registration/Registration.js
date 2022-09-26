@@ -68,6 +68,7 @@ const Registration = () => {
                     dob: event.target.birthday.value,
                     username: event.target.username.value,
                     password: event.target.password.value,
+                    email: event.target.email.value,
                     gender: event.target.gender.value,
                     province: event.target.province.value,
                     city: event.target.city.value,
@@ -76,6 +77,7 @@ const Registration = () => {
                 }
             )
             setSuccess(true);
+            console.log(response.data);
     
         } catch (error) {
             console.log(error)

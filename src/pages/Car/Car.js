@@ -64,7 +64,6 @@ const Car = () => {
   useEffect(() => {
     fetchCarById(carId).then((response) => {
       setCarDetails(response.data[0]);
-      console.log(response.data[0]);
     });
   }, [carId]);
 

@@ -45,7 +45,7 @@
         &--invalid{
             @extend .form__input;
             border: .0625rem solid $red;
-        }
+        }  
     }
 
     &__button{

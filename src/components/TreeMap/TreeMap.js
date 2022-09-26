@@ -24,7 +24,6 @@ export default function Treemap({ data, width, height }) {
       .join("g")
       .attr("transform", (d) => `translate(${d.x0},${d.y0})`)
       .on("click", function (d, i) {
-        console.log(i.data.name);
         window.location.hash = i.data.name;
       })
       .on('mouseover', function(d){

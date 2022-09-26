@@ -21,3 +21,7 @@ export const signUpUser = (body) => {
     return axios.post(`${BASE_URL}/users/register`, body)
 }
 
+export const logInUser = (body) => {
+    return axios.post(`${BASE_URL}/users/login`, body)
+}
+

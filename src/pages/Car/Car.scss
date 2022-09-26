@@ -68,6 +68,7 @@
     &__hero{
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         @include tablet{
             flex-direction: row;
@@ -88,7 +89,7 @@
             align-items: center;
             height: 120px;
             width: 100%;
-            padding: 1rem;
+            padding: 1.5rem;
             background-color: $grey;
             border-radius: 15px;
             margin-bottom: 1rem;
@@ -97,8 +98,8 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                height: 320px;
-                width: 320px;
+                height: 30%;
+                width: 30%;
             }
         }
 
