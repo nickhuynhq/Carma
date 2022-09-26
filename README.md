@@ -6,7 +6,7 @@ This project was created to help regular people visualize the true cost of their
 
 ## Project Screenshot
 
-![App Screenshot](https://firebasestorage.googleapis.com/v0/b/carma-95b63.appspot.com/o/carma-preview.png?alt=media&token=9c369fcc-2407-4b6b-aad6-b316f94a5aeb)
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/carma-95b63.appspot.com/o/carma-mockup.jpg?alt=media&token=d7020ff0-a393-476c-be1d-1d2c99bb06e4)
 
 
 ### Current Website
