@@ -6,7 +6,7 @@ This project was created to help regular people visualize the true cost of their
 
 ## Project Screenshot
 
-![App Screenshot](https://firebasestorage.googleapis.com/v0/b/paperman-4a7c4.appspot.com/o/Final.jpg?alt=media&token=cf4fcafb-570f-467b-ba83-99be77dda25c)
+![App Screenshot]
 
 
 ### Current Website
