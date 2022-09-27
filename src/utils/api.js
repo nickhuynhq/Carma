@@ -25,8 +25,34 @@ export const logInUser = (body) => {
     return axios.post(`${BASE_URL}/users/login`, body)
 }
 
+export const editUser = (body) => {
+    return axios.put(`${BASE_URL}/users/edit`, body, {
+        headers: {
+            Authorization: `Bearer ${localStorage.token}`
+        }
+    })
+}
+
 export const fetchUserVehicleList = () => {
     return axios.get(`${BASE_URL}/saved-vehicles/`,{
+        headers: {
+            Authorization: `Bearer ${localStorage.token}`
+        }
+    })
+}
+
+export const deleteUserVehicle = (body) => {
+    console.log(body)
+    return axios.delete(`${BASE_URL}/saved-vehicles/delete`, {
+        headers: {
+            Authorization: `Bearer ${localStorage.token}`
+        },
+        data: body
+    })
+}
+
+export const addUserVehicle = (body) => {
+    return axios.post(`${BASE_URL}/saved-vehicles/add`, body, {
         headers: {
             Authorization: `Bearer ${localStorage.token}`
         }

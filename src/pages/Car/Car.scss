@@ -12,6 +12,36 @@
         justify-content: space-around;
     }
 
+    &__top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet{
+            flex-direction: row;
+            padding-right: 2rem;
+            justify-content: space-between;
+        }
+    }
+
+    &__button{
+        font-size: 1rem;
+        color: $white;
+        background-color: $magenta;
+        border: none;
+        padding: 1rem 2rem;
+        max-width: 11.25rem;
+        border-radius: 3.125rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            @extend .cars__button;
+            background-color: $dark-magenta;
+            cursor: pointer;
+        }
+    }
+
     &__header{
         background-repeat: no-repeat;
         background-position: center bottom;

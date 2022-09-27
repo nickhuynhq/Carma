@@ -82,4 +82,19 @@
             font-weight: 700;
         }
     }
+
+    &__top{
+        display: flex;
+        justify-content: right;
+        padding-top: 1rem;
+        padding-right: 1rem;
+    }
+    &__delete{
+        width: 1.5rem;
+        cursor: pointer;
+
+        &:hover{
+            filter: invert(31%) sepia(64%) saturate(7459%) hue-rotate(18deg) brightness(97%) contrast(83%);
+        }
+    }
 }

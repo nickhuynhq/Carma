@@ -78,6 +78,8 @@
         }
 
         &-button{
+            display: flex;
+            justify-content: center;
             background: none;
             color: $white;
             border: .0625rem solid $white;
@@ -91,6 +93,19 @@
                 background-color: $white;
                 color: black;
                 mix-blend-mode: lighten;
+            }
+
+            &--profile{
+                @extend .header__navigation-button;
+                background-color: white;
+                color: black;
+                mix-blend-mode: lighten;
+
+                &:hover{
+                    background-color: $purple;
+                    color: $white;
+                    mix-blend-mode: none;
+                }
             }
         }
     }

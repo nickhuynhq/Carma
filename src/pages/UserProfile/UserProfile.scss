@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 10vw;
-    margin-top: -55vh;
+    margin-top: -53vh;
     width: 80vw;
     padding: 1rem;
     border-radius: 15px;
@@ -25,7 +25,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     @include tablet{
-        margin-top: -65vh;
+        margin-top: -63vh;
         padding: 3rem;
     }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { fetchCarByType } from '../../utils/api';
+import { fetchCarByType, fetchCars } from '../../utils/api';
 import Header from "../../components/Header/Header"
 import VehicleCard from '../../components/VehicleCard/VehicleCard';
 import "./CarsList.scss"
@@ -14,23 +14,31 @@ const CarsList = () => {
     let searchObj = {
       type: type
     }
-    fetchCarByType(searchObj)
+
+    if (type){
+      fetchCarByType(searchObj)
+        .then((response) => {
+          setCarList(response.data);
+        })
+    } else {
+      fetchCars()
       .then((response) => {
         setCarList(response.data);
       })
+    }
+    
   }, [type])
 
   if (!carList) {
     return <p>Loading</p>;
   }
-
   return (
     <>
       <div className='cars-list__header'>
         <Header />
       </div>
       <div className='cars-list-section'>
-        <h1>Vehicle Type: {type}</h1>
+        {type ? <h1>Vehicle Type: {type}</h1> : <h1>Vehicle List</h1>}
         <div className='cars-list'>
           {carList.map((car) => {
               return <VehicleCard 

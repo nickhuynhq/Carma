@@ -17,11 +17,15 @@ const Header = () => {
         </div>
         <nav className="header__navigation">
           <ul className="header__navigation-list">
-            <li className="header__navigation-list-item">Vehicles</li>
+            <Link to="/carsList/"><li className="header__navigation-list-item">Vehicles</li></Link>
             <li className="header__navigation-list-item">About</li>
             <li className="header__navigation-list-item">Contact</li>
           </ul>
-          <Link to="/user/login"><button className="header__navigation-button">Login</button></Link>
+          {!localStorage.token ? 
+            <Link to="/user/login"><button className="header__navigation-button">Login</button></Link> :
+            <Link to="/user/profile"><button className="header__navigation-button--profile">Profile</button></Link>
+          }
+          
         </nav>
       </div>
   )

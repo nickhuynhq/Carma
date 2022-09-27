@@ -18,6 +18,7 @@
     @include tablet{
         flex-direction: row;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
     &__header{
         background-repeat: no-repeat;

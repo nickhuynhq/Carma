@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchCarById } from "../../utils/api";
+import { addUserVehicle, fetchCarById } from "../../utils/api";
 import Header from "../../components/Header/Header";
 import "./Car.scss";
 import Treemap from "../../components/TreeMap/TreeMap";
@@ -9,6 +9,7 @@ import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopBut
 const Car = () => {
   const { carId } = useParams();
   const [carDetails, setCarDetails] = useState(null);
+  const [addCar, setAddCar] = useState(false);
 
   const fuel_economy = carDetails
     ? Math.floor(((19000 / 100) * carDetails.fuel_economy * 1.5) / 2)
@@ -67,6 +68,13 @@ const Car = () => {
     });
   }, [carId]);
 
+  const handleAddVehicle = () => {
+    addUserVehicle({car_id: carId})
+    .then((response) => {
+      setAddCar(true);
+    });
+  }
+
   if (!carDetails) {
     return <p>Loading</p>;
   }
@@ -77,11 +85,14 @@ const Car = () => {
         <Header />
       </div>
       <main className="cars__section">
-        <div className="cars__title">
-          <h1 className="cars__title-year">{carDetails.year}</h1>
-          <h2 className="cars__title-model">
-            {carDetails.brand} {carDetails.make}
-          </h2>
+        <div className="cars__top">
+          <div className="cars__title">
+            <h1 className="cars__title-year">{carDetails.year}</h1>
+            <h2 className="cars__title-model">
+              {carDetails.brand} {carDetails.make}
+            </h2>
+          </div>
+          {localStorage.token && addCar === false? <button className="cars__button" onClick={handleAddVehicle}>Add to List</button> : <p>Added</p>}
         </div>
         <div className="cars__hero">
           <img

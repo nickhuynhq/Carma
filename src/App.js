@@ -16,11 +16,6 @@ function App() {
           <Route path="/carsList" element={<CarsList />} />
           <Route path="/carsList/:type" element={<CarsList />} />
           <Route path="/user/:page" element={<UserProfile />} />
-         
-          {/* <Route path="cars/:carId" element={<CarPage />} />
-          <Route path="/userProfile" element={<ProfilePage />} />
-          <Route path="/signUp" element={<SignUpPage />} />
-          <Route path="*" element={<NotFoundPage />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

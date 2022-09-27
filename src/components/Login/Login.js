@@ -3,10 +3,12 @@ import { useRef, useState, useEffect } from "react";
 import { logInUser } from "../../utils/api";
 import "./Login.scss";
 import Cars from "../../assets/images/login-image.png"
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const userRef = useRef();
   const errRef = useRef();
+  const navigate = useNavigate();
 
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
@@ -35,6 +37,10 @@ const Login = () => {
         setUser('');
         setPwd('');
         setSuccess(true) 
+        setTimeout(() => {
+            navigate('/');
+          }, 5000);
+        
     } catch (error) {
         if (!error?.response) {
             setErrMsg('No Server Response')
@@ -54,7 +60,8 @@ const Login = () => {
         {success ? (
             <section>
                 <h1>You are logged in!</h1>
-                <p><a href="/">Go to Home Page</a></p>
+                <p>You will be redirected to the Home Page shortly</p>
+                <p><a className="login-form__button--alt" href="/">Go to Home Page</a></p>
             </section>
         ) : ( 
             <section className="login">
@@ -99,7 +106,6 @@ const Login = () => {
                     <h1>Your Journey Starts Here!</h1>
                 </div>
             </section>
-           
         )}
     </>
   );

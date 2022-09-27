@@ -1,13 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import {
-  faCheck,
-  faTimes,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import {faInfoCircle,} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Registration.scss";
 import { signUpUser } from "../../utils/api";
-import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 
 const Registration = () => {
   // Regular expressions for validation
