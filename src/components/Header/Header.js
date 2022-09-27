@@ -18,8 +18,8 @@ const Header = () => {
         <nav className="header__navigation">
           <ul className="header__navigation-list">
             <Link to="/carsList/"><li className="header__navigation-list-item">Vehicles</li></Link>
-            <li className="header__navigation-list-item">About</li>
-            <li className="header__navigation-list-item">Contact</li>
+            <Link to="/about"><li className="header__navigation-list-item">About</li></Link>
+            <Link to="/contact"><li className="header__navigation-list-item">Contact</li></Link>
           </ul>
           {!localStorage.token ? 
             <Link to="/user/login"><button className="header__navigation-button">Login</button></Link> :

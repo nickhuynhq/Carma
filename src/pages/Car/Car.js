@@ -92,7 +92,7 @@ const Car = () => {
               {carDetails.brand} {carDetails.make}
             </h2>
           </div>
-          {localStorage.token && addCar === false? <button className="cars__button" onClick={handleAddVehicle}>Add to List</button> : <p>Added</p>}
+          {localStorage.token && addCar === false? <button className="cars__button" onClick={handleAddVehicle}>Add to List</button> : ""}
         </div>
         <div className="cars__hero">
           <img

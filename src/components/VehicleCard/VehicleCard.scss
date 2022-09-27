@@ -11,11 +11,11 @@
     cursor: pointer;
 
     @include tablet{
-        max-width: 250px;
+        width: 250px;
     }
 
     @include desktop{
-        max-width: 340px;
+        width: 340px;
     }
 
 
