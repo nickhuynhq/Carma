@@ -1,0 +1,77 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.contact{
+    &__header{
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-image: linear-gradient(125deg, rgba(237,70,90,1) 0%, rgba(85,34,204,0.6643032212885154) 100%),
+            url(../../assets/images/winding-road.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 75vh;
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        margin: 0 10vw;
+        margin-top: -55vh;
+        width: 80vw;
+        padding: 1rem;
+        border-radius: 15px;
+        background-color: $white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        @include tablet{
+            margin-top: -65vh;
+            padding: 3rem;
+        }
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+
+        &-label{
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+    
+        &-input{
+            width: 100%;
+            border-radius: 1.25rem;
+            border: .0625rem solid black;
+            padding: 0.6rem;
+            margin-top: 0.5rem;
+            background-color: $white;
+            font-size: .875rem;
+        }
+    
+        &-button{
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: $white;
+            background-color: $magenta;
+            border: none;
+            padding: 1rem 2rem;
+            max-width: 11.25rem;
+            border-radius: 3.125rem;
+            cursor: pointer;
+            transition: 0.3s;
+    
+            &:hover{
+                @extend .contact__form-button;
+                background-color: $dark-magenta;
+            }
+    
+            &--alt{
+                color: $purple;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+ 

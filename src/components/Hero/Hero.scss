@@ -1,0 +1,79 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem 4rem;
+        background-size: 100% 100%;
+    }
+
+    @include desktop{
+        padding: 1rem 8rem;
+    }
+
+    &__cars{
+        padding: 1rem;
+        min-width: 320px;
+        width: 100%;
+
+        @include tablet{
+            min-width: 400px;
+            max-width: 500px;
+            margin-right: 1rem;
+            padding-left: 0;
+            padding-right: 1rem;
+        }
+
+        @include desktop{
+            max-width: 650px;
+            margin-right: 3rem;
+        }
+    }
+
+    &__text-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        color:$white;
+        background-color: rgba(217, 217, 217, 0.5);
+        border-radius: .625rem;
+
+        @include tablet{
+            max-width: 30%;
+        }
+        @include desktop{
+            padding: 2rem;
+            min-height: 18rem;
+        }
+        &-description{
+            margin: 1rem 0;
+        }
+
+        &-button{
+            color:$white;
+            background-color: $magenta;
+            border: none;
+            padding: 1rem 2rem;
+            max-width: 11.25rem;
+            border-radius: 3.125rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover{
+                @extend .hero__text-box-button;
+                background-color: $dark-magenta;
+            }
+        }
+    }
+
+}

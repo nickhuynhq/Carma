@@ -1,0 +1,112 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    padding: 1rem;
+    color: $white;
+    
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 10%;
+    }
+
+    &__logo{
+        max-height: 2rem;
+        max-width: 2rem;
+        filter: invert(1);
+        margin-right: 0.5rem;
+        transition: 0.5s;
+
+        &-text{
+            font-size: 2rem;
+        }
+    }
+
+    &__logo-container{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover{
+            color: $purple;
+        }
+        &:hover .header__logo{
+            filter: invert(16%) sepia(19%) saturate(3983%) hue-rotate(214deg) brightness(94%) contrast(100%);
+        }
+    }
+
+    &__navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &-list{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding-left: 0;
+
+            @include tablet{
+                margin-right: 1rem;
+            }
+
+            &-item{
+                margin: 0 1rem;
+                cursor: pointer;
+                border-bottom: 3px solid rgba(0, 0, 0, 0);
+                transition: 0.3s;
+
+                &:hover{
+                    border-bottom: 1px solid $white;
+                }
+            }
+        }
+
+        &-button{
+            display: flex;
+            justify-content: center;
+            background: none;
+            color: $white;
+            border: .0625rem solid $white;
+            padding: 0.5rem 2rem;
+            border-radius: 3.125rem;
+            max-width: 6.25rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover{
+                background-color: $white;
+                color: black;
+                mix-blend-mode: lighten;
+            }
+
+            &--profile{
+                @extend .header__navigation-button;
+                background-color: white;
+                color: black;
+                mix-blend-mode: lighten;
+
+                &:hover{
+                    background-color: $purple;
+                    color: $white;
+                    mix-blend-mode: none;
+                }
+            }
+        }
+    }
+}

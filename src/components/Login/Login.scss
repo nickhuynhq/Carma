@@ -1,0 +1,113 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.login{
+    display: flex;
+    flex-direction: column;
+
+    @include tablet{
+        flex-direction: row;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
+
+        @include tablet{
+            width: 50%;
+            padding: 0 8%;
+            border-right: 1px solid $grey
+        }
+
+        &--image{
+            @extend .login__container;
+                padding: 0;
+                display: none;
+                border-right: none;
+            @include tablet{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 5%;
+            }
+        }
+    }
+    &__image{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10%;
+        padding-bottom: 0;
+    }
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    &__label{
+        align-self: flex-start;
+        margin-top: 0.5rem;
+    }
+
+    &__input{
+        width: 100%;
+        border-radius: 1.25rem;
+        border: .0625rem solid black;
+        padding: 0.6rem;
+        margin-top: 0.5rem;
+        background-color: $white;
+        font-size: .875rem;
+    }
+
+    &__button{
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: $white;
+        background-color: $magenta;
+        border: none;
+        padding: 1rem 2rem;
+        max-width: 11.25rem;
+        border-radius: 3.125rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            @extend .login-form__button;
+            background-color: $dark-magenta;
+        }
+
+        &--alt{
+            color: $purple;
+            text-decoration: underline;
+        }
+    }
+
+    &__sign-up{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    &__message{
+        background-color: $magenta;
+        color: whitesmoke;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &--hidden{
+            display: none;
+        }
+    }
+}

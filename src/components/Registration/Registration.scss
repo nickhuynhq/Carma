@@ -1,0 +1,89 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.form{
+    padding: 1rem;
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    
+        @include desktop{
+            flex-direction: row;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        @include desktop{
+            margin-top: 1rem;
+            padding-right: 2rem;
+            width: 100%;
+        }
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+    }
+
+    &__input{
+        width: 100%;
+        border-radius: 1.25rem;
+        border: .0625rem solid black;
+        padding: 0.6rem;
+        margin-top: 0.5rem;
+        background-color: $white;
+        font-size: .875rem;
+        cursor: pointer;
+
+        &--invalid{
+            @extend .form__input;
+            border: .0625rem solid $red;
+        }  
+    }
+
+    &__button{
+        font-size: 1rem;
+        color: $white;
+        background-color: $magenta;
+        border: none;
+        padding: 1rem 2rem;
+        max-width: 11.25rem;
+        border-radius: 3.125rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            @extend .form__button;
+            background-color: $dark-magenta;
+            cursor: pointer;
+        }
+
+        &--alt{
+            margin-left: 1rem;
+            color: $purple;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    &__message{
+        background-color: white;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &--hidden{
+            display: none;
+        }
+    }
+}

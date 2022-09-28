@@ -1,0 +1,142 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.profile{
+    padding: 1rem;
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet{
+            padding-right: 2rem;
+        }
+    }
+
+    &__user{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $grey;
+
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+
+    &__vehicle-list{
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.profile-form{
+
+    &__container{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet{
+            padding-right: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+    }
+
+    &__input{
+        width: 100%;
+        border-radius: 1.25rem;
+        border: none;
+        padding: 0.6rem;
+        margin-top: 0.5rem;
+        background-color: $grey;
+        font-size: .875rem;
+        pointer-events:none;
+
+
+        &--invalid{
+            @extend .profile-form__input;
+            border: .0625rem solid $red;
+        }  
+
+        &--enabled{
+            width: 100%;
+            border-radius: 1.25rem;
+            border: .0625rem solid black;
+            padding: 0.6rem;
+            margin-top: 0.5rem;
+            background-color: $white;
+            font-size: .875rem;
+            cursor: pointer;     
+        }  
+    }
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+
+        @include tablet{
+            margin-top: 1rem;
+        }
+    }
+
+    &__button-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        @include tablet{
+            margin-right: 2rem;
+            justify-content: right;
+        }
+    }   
+
+    &__button{
+        font-size: 1rem;
+        color: $white;
+        background-color: $magenta;
+        border: none;
+        padding: 1rem 2rem;
+        max-width: 11.25rem;
+        border-radius: 3.125rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            @extend .profile-form__button;
+            background-color: $dark-magenta;
+            cursor: pointer;
+        }
+
+        &--edit{
+            @extend .profile-form__button;
+            background-color: $purple;
+            margin-left: 1rem;
+            cursor: pointer;
+
+            &:hover{
+                @extend .profile-form__button--edit;
+
+                color: $purple;
+                background-color: $grey;
+                cursor: pointer;
+            }
+        }
+
+        &--hidden{
+            display: none;
+        }
+    }
+
+}

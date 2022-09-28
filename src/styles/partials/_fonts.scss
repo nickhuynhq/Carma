@@ -1,0 +1,68 @@
+
+// Regular
+@font-face {
+    font-family: 'dm-sans';
+    src: url('/assets/font/DMSans-Regular.ttf') format("truetype"),
+        url('/assets/font/alternative-files/DMSans-Regular.otf') format("opentype"),
+        url('/assets/font/alternative-files/DMSans-Regular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dm-sans';
+    src: url('/assets/font/DMSans-Italic.ttf') format("truetype"),
+        url('/assets/font/alternative-files/DMSans-Italic.otf') format("opentype"),
+        url('/assets/font/alternative-files/DMSans-Italic.woff') format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+// Medium
+@font-face {
+    font-family: 'dm-sans';
+    src: url('/assets/font/DMSans-Medium.ttf') format("truetype"),
+        url('/assets/font/alternative-files/DMSans-Medium.otf') format("opentype"),
+        url('/assets/font/alternative-files/DMSans-Medium.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dm-sans';
+    src: url('/assets/font/DMSans-MediumItalic.ttf') format("truetype"),
+        url('/assets/font/alternative-files/DMSans-MediumItalic.otf') format("opentype"),
+        url('/assets/font/alternative-files/DMSans-MediumItalic.woff') format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+
+// Bold
+@font-face {
+    font-family: 'dm-sans';
+    src: url('/assets/font/DMSans-Bold.ttf') format("truetype"),
+        url('/assets/font/alternative-files/DMSans-Bold.otf') format("opentype"),
+        url('/assets/font/alternative-files/DMSans-Bold.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dm-sans';
+    src: url('/assets/font/DMSans-BoldItalic.ttf') format("truetype"),
+        url('/assets/font/alternative-files/DMSans-BoldItalic.otf') format("opentype"),
+        url('/assets/font/alternative-files/DMSans-BoldItalic.woff') format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+// @font-face {
+//     font-family: 'avenir-next';
+//     src: url('/assets/font//alternative-files/AvenirNextLTProBold.ttf') format("truetype"),
+//         url('/assets/font/AvenirNextLTPro-Bold.otf') format("opentype"),
+//         url('/assets/font/AvenirNextLTProBold.woff') format("woff"),
+//         url('/assets/font/AvenirNextLTProBold.woff2') format("woff2");
+//     font-weight: 700;
+//     font-style: normal;
+// }
+

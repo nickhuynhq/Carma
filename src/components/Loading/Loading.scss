@@ -1,0 +1,25 @@
+@use "../../styles/partials/fonts";
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.loading{
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading__circle {
+  border: 1.25rem solid $grey;
+  border-radius: 50%;
+  border-top: 1.25rem solid $purple;
+  width: 12.5rem;
+  height: 12.5rem;
+  animation: spinner 3s linear infinite;
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
