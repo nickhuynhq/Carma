@@ -9,8 +9,8 @@ import Truck from "../../assets/images/truck.jpg"
 import Hatch from "../../assets/images/hatch.jpg"
 import Coupe from "../../assets/images/coupe.jpg"
 import Minivan from "../../assets/images/minivan.jpg"
-import "./Home.scss"
 import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton'
+import "./Home.scss"
 
 const Home = () => {
 

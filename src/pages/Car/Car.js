@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import "./Car.scss";
 import Treemap from "../../components/TreeMap/TreeMap";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
+import Loading from "../../components/Loading/Loading";
 
 const Car = () => {
   const { carId } = useParams();
@@ -76,7 +77,7 @@ const Car = () => {
   }
 
   if (!carDetails) {
-    return <p>Loading</p>;
+    return <Loading />;
   }
 
   return (

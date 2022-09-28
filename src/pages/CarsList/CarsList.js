@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header"
 import VehicleCard from '../../components/VehicleCard/VehicleCard';
 import "./CarsList.scss"
 import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton';
+import Loading from '../../components/Loading/Loading';
 
 const CarsList = () => {
   const { type } = useParams();
@@ -30,7 +31,7 @@ const CarsList = () => {
   }, [type])
 
   if (!carList) {
-    return <p>Loading</p>;
+    return <Loading />;
   }
   return (
     <>

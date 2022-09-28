@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { editUser, fetchUserVehicleList } from "../../utils/api";
 import VehicleCard from "../VehicleCard/VehicleCard";
+import Loading from "../Loading/Loading"
 import "./Profile.scss"
 
 const Profile = () => {
@@ -57,7 +58,7 @@ const Profile = () => {
   }
 
   if (!userInfo) {
-    return <p>You are not logged in</p>;
+    return <Loading />;
   }
   
   return (

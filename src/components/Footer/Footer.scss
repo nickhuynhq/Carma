@@ -54,12 +54,13 @@
 
     &__social-containter{
         display: flex;
+        align-items: center;
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
 
     &__social-icon{
-        max-width: 48px;
+        max-width: 36px;
         filter: invert(1);
         cursor: pointer;
         margin-left: -6px;

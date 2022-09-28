@@ -13,7 +13,7 @@ const VehicleCard = ({id, brand, make, year, rating, image, setIsDelete}) => {
         console.log (e)
         if (e.target.name === "delete"){
             try {
-                const response = await deleteUserVehicle({car_id: id})  
+                await deleteUserVehicle({car_id: id})  
                 setIsDelete(true);
               } catch (error) {
                   console.log(error)
