@@ -43,20 +43,7 @@ $ cd carma
 $ npm install
 ```
 
-3. Set environment variables
-
-   Create a `.env` file and change placeholder values with your own. 
-
-```bash
-  apiKey: <API_KEY>,
-  authDomain: <AUTH_DOMAIN>,
-  projectId: <PROJECT_ID>,
-  storageBucket: <STORAGE_BUCKET>,
-  messagingSenderId: <MESSAGING_SENDER_ID>,
-  appId: <APP_ID>,
-```
-
-4. Start React App
+3. Start React App
 ```$ npm start```
 
 ## Author
