@@ -28,18 +28,20 @@ const About = () => {
             simple graphics and explanations to give potential car owners a
             "straight to the point" verdict on a variety of vehicles.
           </p>
-          <h1>Tech Stack</h1>
-          <div className='about__social-containter'>
-            <img className='about__tech-icon' src={"https://img.icons8.com/plasticine/344/react.png"} alt="React"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/dusk/344/html-5.png"} alt="HTML5"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/dusk/344/css3.png"} alt="CSS"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/dusk/344/javascript-logo.png"} alt="JavaScript"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/color/344/sass.png"} alt="Sass"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/color/344/nodejs.png"} alt="Node.js"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/color/344/mysql-logo.png"} alt="mySQL"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/color/344/firebase.png"} alt="Firebase"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/color/344/figma--v1.png"} alt="Figma"/>
-            <img className='about__tech-icon' src={"https://img.icons8.com/color/344/adobe-photoshop--v1.png"} alt="Photoshop"/>
+          <div className="about__tech-stack">
+            <h1>Tech Stack</h1>
+            <div className='about__social-containter'>
+              <img className='about__tech-icon' src={"https://img.icons8.com/plasticine/344/react.png"} alt="React"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/dusk/344/html-5.png"} alt="HTML5"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/dusk/344/css3.png"} alt="CSS"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/dusk/344/javascript-logo.png"} alt="JavaScript"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/color/344/sass.png"} alt="Sass"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/color/344/nodejs.png"} alt="Node.js"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/color/344/mysql-logo.png"} alt="mySQL"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/color/344/firebase.png"} alt="Firebase"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/color/344/figma--v1.png"} alt="Figma"/>
+              <img className='about__tech-icon' src={"https://img.icons8.com/color/344/adobe-photoshop--v1.png"} alt="Photoshop"/>
+            </div>
           </div>
         </section>
         
