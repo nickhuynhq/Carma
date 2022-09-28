@@ -59,7 +59,7 @@ const About = () => {
                 <a href="https://www.linkedin.com/in/nickhuynhq/" target='_blank' rel="noreferrer">
                     <img className='about__social-icon' src={LinkedIn} alt="LinkedIn"/>
                 </a>
-                <a href="https://github.com/nickhuynhq/Carma" target='_blank' rel="noreferrer">
+                <a href="https://github.com/nickhuynhq/" target='_blank' rel="noreferrer">
                     <img className='about__social-icon' src={GitHub} alt="GitHub"/>
                 </a>
             </div>
