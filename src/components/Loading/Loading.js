@@ -2,9 +2,9 @@ import "./Loading.scss";
 
 const Loading = () => {
   return (
-    <div className="loading-page">
-      <div className="loading-page__circle"></div>
-      <h2 className="loading-page__text">Loading...</h2>
+    <div className="loading">
+      <div className="loading__circle"></div>
+      <h2 className="loading__text">Loading...</h2>
     </div>
   )
 }
