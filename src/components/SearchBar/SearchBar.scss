@@ -88,4 +88,18 @@
             background-color: $dark-magenta;
         }
     }
+
+    &__message{
+        background-color: white;
+        color: black;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &--hidden{
+            display: none;
+        }
+    }
 }
