@@ -7,6 +7,9 @@ This project was created to help regular people visualize the true cost of their
 Please use this link to demo the live site!
 https://carma-island-app.herokuapp.com/
 
+To view a DEMO video, please use the link below:
+https://www.loom.com/share/30b6d0859220482fb9a5305542f17ff6
+
 ## Project Screenshot
 
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/carma-95b63.appspot.com/o/carma-mockup.jpg?alt=media&token=d7020ff0-a393-476c-be1d-1d2c99bb06e4)
