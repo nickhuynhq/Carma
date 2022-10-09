@@ -20,7 +20,7 @@ https://www.loom.com/share/30b6d0859220482fb9a5305542f17ff6
 ![App Screenshot](https://firebasestorage.googleapis.com/v0/b/carma-95b63.appspot.com/o/carma-2.jpg?alt=media&token=59472fe5-b0fe-44a4-84ce-d54c4f9b1062)
 
 
-## Tech Stacks
+## Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
