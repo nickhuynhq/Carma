@@ -57,6 +57,7 @@ $ npm install
 ## Author
 
 Nicholas Huynh [@nickhuynhq](https://github.com/nickhuynhq)
+![Built with Love](http://ForTheBadge.com/images/badges/built-with-love.svg)
 
 ## Acknowledgements
 
