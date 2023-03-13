@@ -1,6 +1,6 @@
 # CARMA
 
-**Carma is an vehicle database application where Users and see the true cost of a vehicle including depreciation, insurance, fuel, and maintenance**
+**🚗 Carma is an vehicle database application where Users and see the true cost of a vehicle including depreciation, insurance, fuel, and maintenance**
 
 This project was created to help regular people visualize the true cost of their vehicle before purchasing. This is done by having simple graphics and explanations to give potential car owners a "straight to the point" verdict on a variety of vehicles.
 
