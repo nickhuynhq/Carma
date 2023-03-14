@@ -48,14 +48,14 @@ export default function Treemap({ data, width, height }) {
         d3.select(this).style("cursor", "default");
       });
 
-    const fontSize = 22;
+    const fontSize = 18;
 
     // add text to rects
     nodes
       .append("text")
       .text((d) => `${d.data.name} ${d.data.value}`)
       .attr("data-width", (d) => d.x1 - d.x0)
-      .attr("font-size", "18px")
+      .attr("font-size", `${fontSize}px`)
       .attr("x", 8)
       .attr("y", fontSize + 5)
       .call(wrapText);
@@ -63,23 +63,16 @@ export default function Treemap({ data, width, height }) {
     function wrapText(selection) {
       selection.each(function () {
         const node = d3.select(this);
-        const rectWidth = +node.attr("data-width");
+        const rectWidth = node.attr("data-width")
+          ? +node.attr("data-width")
+          : 0; // Check if data-width attribute exists
         let word;
         const words = node.text().split(" ").reverse();
         let line = [];
         let lineNumber = 0;
         const x = node.attr("x");
         const y = node.attr("y");
-        let tspan = node
-          .text("")
-          .append("tspan")
-          .attr("x", x)
-          .attr("y", y)
-          .attr("dy", `${lineNumber * fontSize}px`)
-          .attr("font-size", `${fontSize}px`)
-          .attr("font-weight", "bold")
-          .attr("font-color", "white")
-          .attr("line-height", "1.5");
+        let tspan = node.text("").append("tspan").attr("x", x).attr("y", y);
         while (words.length > 1) {
           word = words.pop();
           line.push(word);
@@ -101,8 +94,6 @@ export default function Treemap({ data, width, height }) {
             .attr("x", x)
             .attr("y", y)
             .attr("dy", `${lineNumber * fontSize}px`)
-            .attr("font-size", `${fontSize}px`)
-            .attr("line-height", "1.5")
             .text(text);
         }
       });
