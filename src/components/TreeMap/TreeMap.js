@@ -1,6 +1,6 @@
 import { useRef, useEffect, useCallback } from "react";
 import * as d3 from "d3";
-import "./TreeMap.scss"
+import "./TreeMap.scss";
 
 export default function Treemap({ data, width, height }) {
   const svgRef = useRef(null);
@@ -26,11 +26,11 @@ export default function Treemap({ data, width, height }) {
       .on("click", function (d, i) {
         window.location.hash = i.data.name;
       })
-      .on('mouseover', function(d){
-        d3.select(this).style("opacity", 0.5); 
+      .on("mouseover", function (d) {
+        d3.select(this).style("opacity", 0.5);
       })
-      .on('mouseout', function(d){
-        d3.select(this).style("opacity", 1); 
+      .on("mouseout", function (d) {
+        d3.select(this).style("opacity", 1);
       });
 
     const fader = (color) => d3.interpolateRgb(color, "#fff")(0.5);
@@ -41,21 +41,21 @@ export default function Treemap({ data, width, height }) {
       .attr("width", (d) => d.x1 - d.x0)
       .attr("height", (d) => d.y1 - d.y0)
       .attr("fill", (d) => colorScale(d.data.name))
-      .on('mouseover', function(d){
-        d3.select(this).style("cursor", "pointer"); 
+      .on("mouseover", function (d) {
+        d3.select(this).style("cursor", "pointer");
       })
-      .on('mouseout', function(d){
-        d3.select(this).style("cursor", "default"); 
+      .on("mouseout", function (d) {
+        d3.select(this).style("cursor", "default");
       });
 
-    const fontSize = 14;
+    const fontSize = 22;
 
     // add text to rects
     nodes
       .append("text")
       .text((d) => `${d.data.name} ${d.data.value}`)
       .attr("data-width", (d) => d.x1 - d.x0)
-      .attr("font-size", `${fontSize}px`)
+      .attr("font-size", "18px")
       .attr("x", 8)
       .attr("y", fontSize + 5)
       .call(wrapText);
@@ -70,7 +70,16 @@ export default function Treemap({ data, width, height }) {
         let lineNumber = 0;
         const x = node.attr("x");
         const y = node.attr("y");
-        let tspan = node.text("").append("tspan").attr("x", x).attr("y", y);
+        let tspan = node
+          .text("")
+          .append("tspan")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("dy", `${lineNumber * fontSize}px`)
+          .attr("font-size", `${fontSize}px`)
+          .attr("font-weight", "bold")
+          .attr("font-color", "white")
+          .attr("line-height", "1.5");
         while (words.length > 1) {
           word = words.pop();
           line.push(word);
@@ -92,11 +101,13 @@ export default function Treemap({ data, width, height }) {
             .attr("x", x)
             .attr("y", y)
             .attr("dy", `${lineNumber * fontSize}px`)
+            .attr("font-size", `${fontSize}px`)
+            .attr("line-height", "1.5")
             .text(text);
         }
       });
     }
-  }, [data, height, width])
+  }, [data, height, width]);
 
   useEffect(() => {
     renderTreemap();
