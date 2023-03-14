@@ -1,11 +1,11 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import * as d3 from "d3";
 import "./TreeMap.scss"
 
 export default function Treemap({ data, width, height }) {
   const svgRef = useRef(null);
 
-  function renderTreemap() {
+  const renderTreemap = useCallback(() => {
     const svg = d3.select(svgRef.current);
 
     // Make svg responsive to viewbox
@@ -96,11 +96,11 @@ export default function Treemap({ data, width, height }) {
         }
       });
     }
-  }
+  }, [data, height, width])
 
   useEffect(() => {
     renderTreemap();
-  }, [data]);
+  }, [data, renderTreemap]);
 
   return (
     <div className="treemap">

@@ -3,8 +3,6 @@ import "./About.scss";
 import Header from "../../components/Header/Header";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
 import ProfileImage from "../../assets/images/profile.jpg"
-import Facebook from '../../assets/icons/facebook.svg'
-import Twitter from '../../assets/icons/twitter.svg'
 import LinkedIn from '../../assets/icons/linkedin.svg'
 import GitHub from '../../assets/icons/github.svg'
 
