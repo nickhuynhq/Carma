@@ -1,6 +1,6 @@
 import { useRef, useEffect, useCallback } from "react";
 import * as d3 from "d3";
-import "./TreeMap.scss"
+import "./TreeMap.scss";
 
 export default function Treemap({ data, width, height }) {
   const svgRef = useRef(null);
@@ -26,11 +26,11 @@ export default function Treemap({ data, width, height }) {
       .on("click", function (d, i) {
         window.location.hash = i.data.name;
       })
-      .on('mouseover', function(d){
-        d3.select(this).style("opacity", 0.5); 
+      .on("mouseover", function (d) {
+        d3.select(this).style("opacity", 0.5);
       })
-      .on('mouseout', function(d){
-        d3.select(this).style("opacity", 1); 
+      .on("mouseout", function (d) {
+        d3.select(this).style("opacity", 1);
       });
 
     const fader = (color) => d3.interpolateRgb(color, "#fff")(0.5);
@@ -41,14 +41,14 @@ export default function Treemap({ data, width, height }) {
       .attr("width", (d) => d.x1 - d.x0)
       .attr("height", (d) => d.y1 - d.y0)
       .attr("fill", (d) => colorScale(d.data.name))
-      .on('mouseover', function(d){
-        d3.select(this).style("cursor", "pointer"); 
+      .on("mouseover", function (d) {
+        d3.select(this).style("cursor", "pointer");
       })
-      .on('mouseout', function(d){
-        d3.select(this).style("cursor", "default"); 
+      .on("mouseout", function (d) {
+        d3.select(this).style("cursor", "default");
       });
 
-    const fontSize = 14;
+    const fontSize = 18;
 
     // add text to rects
     nodes
@@ -63,7 +63,9 @@ export default function Treemap({ data, width, height }) {
     function wrapText(selection) {
       selection.each(function () {
         const node = d3.select(this);
-        const rectWidth = +node.attr("data-width");
+        const rectWidth = node.attr("data-width")
+          ? +node.attr("data-width")
+          : 0; // Check if data-width attribute exists
         let word;
         const words = node.text().split(" ").reverse();
         let line = [];
@@ -96,7 +98,7 @@ export default function Treemap({ data, width, height }) {
         }
       });
     }
-  }, [data, height, width])
+  }, [data, height, width]);
 
   useEffect(() => {
     renderTreemap();
