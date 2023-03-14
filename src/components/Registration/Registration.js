@@ -1,16 +1,16 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
-import {faInfoCircle,} from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Registration.scss";
 import { signUpUser } from "../../utils/api";
 
 const Registration = () => {
- // Regular expressions for validation
- const USER_REGEX = useMemo(() => /^[A-z][A-z0-9-_]{3,23}$/, []);
- const PWD_REGEX = useMemo(
-   () => /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/,
-   []
- );
+  // Regular expressions for validation
+  const USER_REGEX = useMemo(() => /^[A-z][A-z0-9-_]{3,23}$/, []);
+  const PWD_REGEX = useMemo(
+    () => /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/,
+    []
+  );
 
   const userRef = useRef();
 
@@ -69,9 +69,11 @@ const Registration = () => {
           commute_days: "",
         });
         setSuccess(true);
+        setErrMsg(null);
         console.log(response.data);
       } catch (error) {
         console.log(error);
+        setErrMsg(error);
       }
     }
   };
@@ -82,12 +84,15 @@ const Registration = () => {
         <section>
           <h1>Success!</h1>
           <p>
-            <a className="form__button--alt" href="/user/login">Sign In</a>
+            <a className="form__button--alt" href="/user/login">
+              Sign In
+            </a>
           </p>
         </section>
       ) : (
         <form className="form" onSubmit={handleSubmit}>
           <h1 className="form__title">Sign Up</h1>
+          {errMsg && <p className="form__message">errMsg</p>}
           <div className="form__body">
             {/* Account Info Container */}
             <div className="form__container">
