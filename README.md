@@ -5,7 +5,7 @@
 This project was created to help regular people visualize the true cost of their vehicle before purchasing. This is done by having simple graphics and explanations to give potential car owners a "straight to the point" verdict on a variety of vehicles.
 
 Please use this link to demo the live site!
-https://carma-island-app.herokuapp.com/
+https://carma.nickhuynhq.com/
 
 To view a DEMO video, please use the link below:
 https://www.loom.com/share/30b6d0859220482fb9a5305542f17ff6
