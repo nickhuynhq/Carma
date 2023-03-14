@@ -51,6 +51,8 @@ const SearchBar = () => {
     if (car.brand === brand){
       return car.make;
     }
+
+    return null;
   });
 
   const filteredMakeList = [...new Set(makeList)];
@@ -59,6 +61,8 @@ const SearchBar = () => {
     if (car.make === make){
       return car.year;
     }
+
+    return null;
   });
 
   const filteredYearList = [...new Set(yearList)];
