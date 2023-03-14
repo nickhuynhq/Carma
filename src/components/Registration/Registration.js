@@ -1,16 +1,18 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import {faInfoCircle,} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Registration.scss";
 import { signUpUser } from "../../utils/api";
 
 const Registration = () => {
-  // Regular expressions for validation
-  const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
-  const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+ // Regular expressions for validation
+ const USER_REGEX = useMemo(() => /^[A-z][A-z0-9-_]{3,23}$/, []);
+ const PWD_REGEX = useMemo(
+   () => /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/,
+   []
+ );
 
   const userRef = useRef();
-  const errRef = useRef();
 
   const [user, setUser] = useState("");
   const [validName, setValidName] = useState(false);
@@ -34,12 +36,12 @@ const Registration = () => {
 
   useEffect(() => {
     setValidName(USER_REGEX.test(user));
-  }, [user]);
+  }, [USER_REGEX, user]);
 
   useEffect(() => {
     setValidPwd(PWD_REGEX.test(pwd));
     setValidMatch(pwd === matchPwd);
-  }, [pwd, matchPwd]);
+  }, [pwd, matchPwd, PWD_REGEX]);
 
   // Clear out error message
   useEffect(() => {
@@ -49,34 +51,28 @@ const Registration = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const validate1 = USER_REGEX.test(user);
-    const validate2 = PWD_REGEX.test(pwd);
-
-    if (!validate1 || !validate2) {
+    if (!validName || !validPwd) {
       setErrMsg("Invalid Entry");
       return;
     } else {
-        try {
-            const response = await signUpUser(
-                {
-                    name: event.target.name.value,
-                    dob: event.target.birthday.value,
-                    username: event.target.username.value,
-                    password: event.target.password.value,
-                    email: event.target.email.value,
-                    gender: event.target.gender.value,
-                    province: event.target.province.value,
-                    city: event.target.city.value,
-                    commute_distance: event.target.commute_distance.value,
-                    commute_days: event.target.commute_days.value
-                }
-            )
-            setSuccess(true);
-            console.log(response.data);
-    
-        } catch (error) {
-            console.log(error)
-        }
+      try {
+        const response = await signUpUser({
+          name: "",
+          dob: "",
+          username: user,
+          password: pwd,
+          email: "",
+          gender: "",
+          province: "",
+          city: "",
+          commute_distance: "",
+          commute_days: "",
+        });
+        setSuccess(true);
+        console.log(response.data);
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
